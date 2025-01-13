@@ -64,8 +64,26 @@ class SLL {
         }
         return length;
     }
+
+    display() {
+        var myString="";
+        let runner=this.head;
+        while(runner!==null) {
+    
+            myString+=runner.data;
+            if(runner.next==null) {
+                myString+=(".");
+            }
+            else {myString+=(", ");}
+            
+            runner=runner.next;
+        }
+        return myString;
+    }
 }
 
 SLL1 = new SLL();
-
-console.log(SLL1.length());
+SLL1.addFront(1);
+SLL1.addFront(2);
+SLL1.addFront(3);
+console.log(SLL1.display());
